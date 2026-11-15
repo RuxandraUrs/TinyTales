@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tiny Tales - povești educative pentru copii.">
+  <title>Tiny Tales | Începe povestea</title>
+  <link rel="icon" type="image/png" href="../assets/img/icon.png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <main class="page-shell">
+    <section class="hero" aria-labelledby="page-title">
+      <div class="hero__content">
+        <p class="eyebrow">O lume întreagă într-o poveste</p>
+        <h1 id="page-title">Tiny Tales</h1>
+        <p class="hero__quote">„Cine citește trăiește o mie de vieți înainte de a muri.”</p>
+        <p class="hero__intro">Alege povestea potrivită pentru tine și pornește într-o aventură plină de imaginație.</p>
+      </div>
+      <div class="hero__image-wrap">
+        <img src="../assets/img/books.jpg" alt="Cărți colorate așezate una peste alta">
+      </div>
+    </section>
+
+    <section class="story-picker" aria-labelledby="story-picker-title">
+      <h2 id="story-picker-title">Pregătește-ți aventura</h2>
+      <div class="story-picker__fields">
+        <div class="field">
+          <label for="story">Alege opera</label>
+          <select id="story" name="story">
+            <option value="" selected disabled>Alege o poveste</option>
+            <option value="capra-cu-trei-iezi">Capra cu trei iezi</option>
+            <option value="punguta-cu-doi-bani">Punguța cu doi bani</option>
+            <option value="ursul-pacalit-de-vulpe">Ursul păcălit de vulpe</option>
+            <option value="prasilea">Prâslea cel voinic și merele de aur</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="level">Alege nivelul</label>
+          <select id="level" name="level">
+            <option value="" selected disabled>Alege nivelul</option>
+            <option value="0">0</option>
+            <option value="I">I</option>
+            <option value="II">II</option>
+            <option value="III">III</option>
+            <option value="IV">IV</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="format">Alege modul de redare</label>
+          <select id="format" name="format">
+            <option value="" selected disabled>Alege modul</option>
+            <option value="audio">Audio</option>
+            <option value="scris">Scris</option>
+          </select>
+        </div>
+      </div>
+
+      <button class="start-button" type="button">Începe povestea <span aria-hidden="true">→</span></button>
+      <a class="contact-link" href="postcard.html">Contactează-ne</a>
+    </section>
+  </main>
+</body>
+</html>
