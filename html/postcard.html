@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tiny Tales - Trimite o vedere personajelor din poveste.">
+    <title>Tiny Tales | Trimite o vedere</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <main class="page-shell">
+        <header class="postcard-header">
+            <a class="back-link" href="idex.html">← Înapoi la povești</a>
+            <p id="postcard-eyebrow" class="eyebrow">Felicitări, ai terminat povestea!</p>
+            <h1 id="postcard-title" class="postcard-title">Trimite o vedere</h1>
+            <p id="postcard-subtitle" class="postcard-subtitle">Scrie un gând frumos personajelor tale preferate ca
+                recompensă pentru lectura ta.</p>
+        </header>
+
+        <section class="postcard-card" aria-labelledby="postcard-form-title">
+            <h2 id="postcard-form-title" class="visually-hidden">Formular vedere digitală</h2>
+
+            <form id="postcard-form" class="postcard-layout">
+
+                <div class="postcard-left">
+                    <div class="field">
+                        <label id="select-label" for="character-select">Către cine trimiți vederea?</label>
+                        <select id="character-select" name="character" required>
+                            <option value="capra-cu-trei-iezi">Capra și cei trei iezi</option>
+                            <option value="punguta-cu-doi-bani">Cocoșul din Punguța cu doi bani</option>
+                            <option value="ursul-pacalit-de-vulpe">Ursul și Vulpea</option>
+                            <option value="praslea">Prâslea cel Voinic</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label id="name-label" for="child-name">Numele tău</label>
+                        <input type="text" id="child-name" name="childName" placeholder="Ex: Andrei" required>
+                    </div>
+
+                    <div class="field">
+                        <label id="message-label" for="postcard-message">Mesajul tău pentru personaje</label>
+                        <textarea id="postcard-message" name="message" rows="5"
+                            placeholder="Dragă personaj, mi-a plăcut mult povestea ta..." required></textarea>
+                    </div>
+
+                    <button id="submit-btn" class="start-button" type="submit">Trimite vederea <span
+                            aria-hidden="true">✉</span></button>
+                </div>
+
+                <div class="postcard-right">
+                    <div class="postcard-stamp">
+                        <img id="stamp-image" src="../assets/img/3iezi.jpg" alt="Ilustrație poveste">
+                        <span class="stamp-badge">Tiny Tales Post</span>
+                    </div>
+
+                    <div class="postcard-address">
+                        <p class="address-label">Destinatar:</p>
+                        <p id="recipient-preview" class="address-line">Capra și cei trei iezi</p>
+                        <p class="address-line">Tărâmul Poveștilor, Nr. 1</p>
+                        <p class="address-line">Biblioteca Tiny Tales</p>
+                    </div>
+                </div>
+            </form>
+
+            <div id="postcard-modal" class="modal-overlay" hidden>
+                <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+                    <h3 id="modal-title">🌟 Vederea ta a fost trimisă!</h3>
+                    <p id="success-text"></p>
+                    <button id="close-modal" class="start-button" type="button">Super! Scrie altă vedere</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

@@ -193,3 +193,236 @@ select:focus,
     grid-template-columns: 1fr;
   }
 }
+
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.postcard-header {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #4f97bd;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.postcard-title {
+  margin: 0 0 12px;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -2px;
+}
+
+.postcard-subtitle {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #71695d;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.postcard-card {
+  background: #fffdf9;
+  border: 1px solid #ded7cb;
+  border-radius: 28px;
+  padding: 44px;
+  box-shadow: 0 18px 50px rgba(80, 57, 34, 0.1);
+}
+
+.postcard-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.postcard-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-right: 40px;
+  border-right: 2px dashed #ded7cb;
+}
+
+.postcard-left input,
+.postcard-left textarea {
+  width: 100%;
+  padding: 14px 16px;
+  color: #29251f;
+  background: #fffdf9;
+  border: 1px solid #ded7cb;
+  border-radius: 12px;
+  font: inherit;
+}
+
+.postcard-left textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.postcard-left input:focus,
+.postcard-left textarea:focus,
+.back-link:focus-visible {
+  outline: 3px solid rgba(79, 151, 189, 0.35);
+  outline-offset: 3px;
+}
+
+.postcard-left .start-button {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.postcard-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 32px;
+}
+
+.postcard-stamp {
+  width: 180px;
+  padding: 10px;
+  background: #f9f6f0;
+  border: 2px dashed #c8bfb0;
+  border-radius: 14px;
+  text-align: center;
+}
+
+.postcard-stamp img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.stamp-badge {
+  display: block;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #71695d;
+}
+
+.postcard-address {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.address-label {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #4f97bd;
+}
+
+.address-line {
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ded7cb;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  color: #29251f;
+}
+
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(41, 37, 31, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.modal-box {
+  width: 100%;
+  max-width: 460px;
+  padding: 36px 28px;
+  text-align: center;
+  background: #fffdf9;
+  border: 1px solid #ded7cb;
+  border-radius: 28px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.2);
+}
+
+.modal-box h3 {
+  margin: 0 0 12px;
+  font-size: 28px;
+  color: #173c50;
+}
+
+.modal-box p {
+  margin: 0 0 24px;
+  color: #71695d;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+button:disabled,
+select:disabled,
+input:disabled,
+.setting-disabled {
+  background: #e6e2da !important;
+  color: #9b9488 !important;
+  border-color: #d5cfc4 !important;
+  opacity: 0.6;
+  cursor: not-allowed !important;
+  pointer-events: none;
+}
+
+@media (max-width: 720px) {
+  .postcard-title {
+    font-size: 40px;
+  }
+
+  .postcard-card {
+    padding: 28px 20px;
+  }
+
+  .postcard-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .postcard-left {
+    padding-right: 0;
+    padding-bottom: 28px;
+    border-right: 0;
+    border-bottom: 2px dashed #ded7cb;
+  }
+
+  .postcard-right {
+    align-items: center;
+  }
+}
