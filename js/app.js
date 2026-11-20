@@ -61,7 +61,7 @@ function initPostcardPage() {
         stampImage.alt = "Biblioteca Tiny Tales";
         recipientPreview.textContent = "Echipa Bibliotecii Tiny Tales";
 
-        modalTitle.textContent = "📚 Scrisoarea a ajuns la bibliotecă!";
+        modalTitle.textContent = "Scrisoarea a ajuns la bibliotecă!";
         closeModalBtn.textContent = "Trimite altă sugestie";
     } else {
 
